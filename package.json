@@ -1,0 +1,19 @@
+{
+  "name": "aworks-server",
+  "version": "1.0.0",
+  "description": "Simple dummy server",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andreyluiz/aworks-server.git"
+  },
+  "author": "Andrey Luiz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andreyluiz/aworks-server/issues"
+  },
+  "homepage": "https://github.com/andreyluiz/aworks-server"
+}
