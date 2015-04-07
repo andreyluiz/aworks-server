@@ -2,7 +2,7 @@
   "name": "aworks-server",
   "version": "1.0.0",
   "description": "Simple dummy server",
-  "main": "main.js",
+  "main": "app/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/andreyluiz/aworks-server/issues"
   },
-  "homepage": "https://github.com/andreyluiz/aworks-server"
+  "homepage": "https://github.com/andreyluiz/aworks-server",
+  "dependencies": {
+    "express": "^4.12.3",
+    "mongodb": "^2.0.27",
+    "mongoose": "^4.0.1"
+  }
 }
