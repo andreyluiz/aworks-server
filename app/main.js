@@ -10,7 +10,13 @@ var app = express();
 app.use(bodyParser());
 app.use(express.query());
 
-var mongoDbUri = "mongodb://" + MONGOLAB_USER + ":" + MONGOLAB_PASSWORD + "@" + MONGOLAB_URI + ":" + MONGOLAB_PORT + "/" + MONGOLAB_DB;
+var mongoLabUser = process.env('MONGOLAB_USER') || 'admin';
+var mongoLabPassword = process.env('MONGOLAB_PASSWORD') || 'iN072wSEuB';
+var mongoLabUri = process.env('MONGOLAB_URI') || 'ds061621.mongolab.com';
+var mongoLabPort = process.env('MONGOLAB_PORT') || '61621';
+var mongoLabDb = process.env('MONGOLAB_DB') || 'aworks';
+
+var mongoDbUri = 'mongodb://' + mongoLabUser + ':' + mongoLabPassword + '@' + mongoLabUri + ':' + mongoLabPort + '/' + mongoLabDb;
 
 mongoose.connect(mongoDbUri);
 
