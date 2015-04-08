@@ -3,12 +3,14 @@
 var express = require('express'),
 	restful = require('node-restful'),
 	bodyParser = require('body-parser'),
+	cors = require('cors'),
 	mongoose = restful.mongoose;
 
 var app = express();
 
 app.use(bodyParser());
 app.use(express.query());
+app.use(cors())
 
 var mongoLabUser = process.env.MONGOLAB_USER || 'admin';
 var mongoLabPassword = process.env.MONGOLAB_PASSWORD || 'iN072wSEuB';
