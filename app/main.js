@@ -10,12 +10,7 @@ var app = express();
 app.use(bodyParser());
 app.use(express.query());
 
-var MONGOLAB_USER;
-var MONGOLAB_PASSWORD;
-var MONGOLAB_URI;
-var mongoDbUser = MONGOLAB_USER || "admin";
-var mongoDbPassword = MONGOLAB_PASSWORD || "iN072wSEuB";
-var mongoDbUri = MONGOLAB_URI || "mongodb://" + mongoDbUser + ":" + mongoDbPassword + "@ds061621.mongolab.com:61621/aworks";
+var mongoDbUri = "mongodb://" + MONGOLAB_USER + ":" + MONGOLAB_PASSWORD + "@" + MONGOLAB_URI + ":" + MONGOLAB_PORT + "/" + MONGOLAB_DB;
 
 mongoose.connect(mongoDbUri);
 
