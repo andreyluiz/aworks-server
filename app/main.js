@@ -31,4 +31,4 @@ var Evento = app.resource = restful.model('evento', mongoose.Schema({
 
 Evento.register(app, '/eventos');
 
-app.listen(process.env('PORT'));
+app.listen(process.env.PORT || 3000);
